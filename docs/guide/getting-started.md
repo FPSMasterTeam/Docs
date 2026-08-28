@@ -15,11 +15,13 @@ FPSMaster 目前有两个可供玩家下载的客户端：Edge 和 Nova。本页
 
 两者目前都是 beta 版本，可能遇到问题。beta 的含义见[常见问题](/guide/faq#beta-版本是什么意思)。
 
+启动器里还能看到一个实验性的 Extreme 预设。它不完整，不适合当日常客户端，介绍见[实验项目](/about/experiments)。
+
 ## 再选安装方式
 
 两条路，选一条：
 
-**用启动器（推荐新手）。** [FPSMaster 启动器](/guide/launcher)内置 Edge 和 Nova 的预设实例。点一下，它会下载游戏本体、装好加载器和客户端，然后直接启动。不用手动管理文件。
+**用启动器（推荐新手）。** [FPSMaster 启动器](/guide/launcher)内置 Edge 和 Nova 的预设实例。先登录 FPSMaster 账号，再选预设点启动，它会下载游戏本体、装好加载器和客户端，然后直接启动。不用手动管理文件。
 
 **手动安装（适合已经在用其他启动器的玩家）。** 自己装 Forge 或 Fabric，再把客户端 jar 放进 mods 文件夹。具体步骤见 [Edge](/guide/edge#手动安装) 和 [Nova](/guide/nova#手动安装) 页面。
 
@@ -27,7 +29,7 @@ FPSMaster 目前有两个可供玩家下载的客户端：Edge 和 Nova。本页
 
 1. 确认你要玩的 Minecraft 版本。
 2. 安装对应的加载器：Edge 装 Forge 1.8.9，Nova 装对应版本的 Fabric Loader。
-3. 从[官网](https://fpsmaster.top)、Modrinth 或 CurseForge 下载客户端 jar。
+3. 从[官网](https://fpsmaster.top)或 Modrinth 下载客户端 jar。Edge 也上架了 CurseForge。
 4. 把 jar 放进 `.minecraft/mods` 文件夹。用多实例启动器的话，放进对应实例的 `mods`。
 5. 正常启动游戏。
 

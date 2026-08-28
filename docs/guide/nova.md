@@ -76,11 +76,16 @@ Nova 的模块同样分四类。名称和用途与 Edge 大体对应，按你在
 - `.set <模块> <选项> <值>`：修改模块选项。
 - `.bind <模块> <按键|none>`：绑定快捷键。
 - `.config`：管理配置方案。
-- `.telemetry`：查看匿名数据开关的当前状态。
+- `.telemetry status`：查看匿名数据上报的当前状态。
+- `.telemetry on` / `.telemetry off`：开启或关闭匿名数据上报。
 
 ## 账号与饰品
 
 主菜单支持添加微软账号或离线账号。登录 FPSMaster 账号后可以预览和穿戴披风、龙翼背饰等饰品，不登录不影响正常游玩。
+
+## 匿名使用数据
+
+Nova 的匿名数据上报默认关闭。用 `.telemetry on` 开启，`.telemetry off` 关闭，`.telemetry status` 查看当前状态。上报内容是匿名使用数据，不包含明文账号信息。
 
 ## 与 Via 系列共存
 
