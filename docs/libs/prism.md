@@ -14,7 +14,7 @@ Edge 和 Nova 使用同一套 `Shared*` 界面。两个客户端分别实现 `Ui
 top.fpsmaster:prism:0.2.0
 ```
 
-仓库目前没有公开 tag 或 Release。README 中的 `0.1.0` JitPack 示例不能视为已发布制品。需要接入时，从源码构建并发布到本地 Maven：
+仓库目前没有公开 tag 或 Release。README 中的 `0.1.0` JitPack 示例不能视为已发布制品。需要接入时，使用 JDK 17 或 21 运行仓库的 Gradle 9 Wrapper，从源码构建并发布到本地 Maven。不要用 JDK 8 启动 Gradle；产物仍是 Java 8 字节码。
 
 ```bash
 git clone https://github.com/FPSMasterTeam/fpsmaster-prism.git

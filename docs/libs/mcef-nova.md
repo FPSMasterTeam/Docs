@@ -2,13 +2,17 @@
 
 mcef-nova 是与 Minecraft 版本解耦的 CEF 组件。它处理 JCEF 生命周期、离屏浏览器输入和浏览器帧纹理，不直接调用 Minecraft 渲染 API。
 
-源码可见，制品经 GitHub Packages 分发。许可证是 LGPL-2.1。Nova 当前消费的已发布版本是 `1.0.1`。
+源码可见，已发布制品经 GitHub Packages 分发。许可证是 LGPL-2.1。Nova 当前消费版本 `1.0.1`，并在自身仓库的 `vendor/maven` 中保留了离线制品。
 
 源码仓库：[mcef-nova](https://github.com/FPSMasterTeam/mcef-nova)。
 
-## 配置 GitHub Packages
+## 在 Nova 中使用
 
-读取 GitHub Packages 需要鉴权。将用户名和具有 `read:packages` 权限的令牌放入用户级 Gradle 配置：
+Nova 的 `vendor/maven` 包含 mcef-nova `1.0.1` 的 jar、源码 jar 和 Maven 元数据。Gradle 会先从该目录解析依赖，因此普通贡献者克隆并构建 Nova 时不需要 GitHub 令牌。
+
+## 直接消费 GitHub Packages
+
+只有其他项目直接从 GitHub Packages 解析 mcef-nova 时，才需要配置 `gpr.user` 和 `gpr.key`。将用户名和具有 `read:packages` 权限的令牌放入用户级 Gradle 配置：
 
 ```properties
 # ~/.gradle/gradle.properties
@@ -36,7 +40,7 @@ dependencies {
 }
 ```
 
-CI 中使用 CI 平台提供的包读取凭证。不要在工作流文件中写死令牌值。GitHub Packages 即使读取也可能要求仓库或账号具备包访问权限。
+GitHub Packages 即使读取也可能要求仓库或账号具备包访问权限。
 
 ## 宿主职责
 
@@ -124,12 +128,11 @@ MCEF.INSTANCE.shutdown();
 
 ## 从源码构建
 
-mcef-nova 将 `java-cef` 作为子模块：
+mcef-nova 将 `java-cef` 目录直接纳入仓库，仓库没有 `.gitmodules`，不需要初始化子模块：
 
 ```bash
-git clone --recurse-submodules https://github.com/FPSMasterTeam/mcef-nova.git
+git clone https://github.com/FPSMasterTeam/mcef-nova.git
 cd mcef-nova
-git submodule update --init --recursive java-cef
 ./gradlew build
 ```
 

@@ -60,6 +60,8 @@ if (track != null) {
 
 会员内容、地区限制和登录状态都可能让链接降级或为空。
 
+调用音乐平台服务时应遵守对应平台条款，只使用自己的账户和获授权访问的内容。播放直链可能受时效和账户状态限制，不要记录后再次分发。
+
 ## 歌词
 
 `MusicService.getLyric(track)` 已返回解析后的时间轴：
@@ -153,6 +155,8 @@ MusicLog.logger = object : MusicLogger {
 接入时避免记录请求凭证和完整响应头。
 
 ## 开发 Cadence
+
+使用 JDK 17 或 21 运行仓库的 Gradle 9 Wrapper，不要用 JDK 8 启动 Gradle。编译产物仍是 Java 8 字节码。
 
 ```bash
 git clone https://github.com/FPSMasterTeam/Cadence.git

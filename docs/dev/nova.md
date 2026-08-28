@@ -21,7 +21,7 @@ Windows 和 macOS 有实际运行记录。Linux 尚未测试。Intel 集成显�
 
 克隆 [fpsmaster-nova](https://github.com/FPSMasterTeam/fpsmaster-nova)，然后从仓库根目录运行 Gradle Wrapper。仓库当前没有 `ui/` 目录，不需要启动单独的 npm 开发服务器。
 
-Nova 依赖 Prism、Cadence 和 mcef-nova。mcef-nova 的 `1.0.1` 制品从 GitHub Packages 获取；鉴权配置见 [mcef-nova 文档](/libs/mcef-nova)。
+Nova 依赖 Prism、Cadence 和 mcef-nova。仓库的 `vendor/maven` 已包含 mcef-nova `1.0.1` 的离线制品，普通贡献者构建 Nova 不需要配置 GitHub 令牌。只有绕过离线制品、直接从 GitHub Packages 消费依赖时，才需要设置 `gpr.user` 和 `gpr.key`；配置方法见 [mcef-nova 文档](/libs/mcef-nova)。
 
 ## 常用命令
 

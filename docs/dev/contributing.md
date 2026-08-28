@@ -49,7 +49,7 @@ Edge 使用 Java 8 目标字节码。Nova 的版本差异写在 Stonecutter 条�
 | 启动器 | 在 `tauri-app/` 执行 `npm run typecheck`、`npm run lint`、`npm run build` |
 | Prism | `./gradlew test` |
 | Cadence | `./gradlew build` |
-| mcef-nova | 初始化 `java-cef` 子模块后执行 `./gradlew build` |
+| mcef-nova | `./gradlew build` |
 | Extreme | `cargo check` 和相关 crate 的 `cargo test` |
 | Docs | `npm ci` 和 `npm run docs:build` |
 
