@@ -15,7 +15,7 @@ FPSMaster 的代码按产品和库拆在多个仓库。先确定改动属于哪�
 | [fpsmaster-extreme](https://github.com/FPSMasterTeam/fpsmaster-extreme) | Rust 客户端与扩展 SDK 实验 | MIT |
 | [Docs](https://github.com/FPSMasterTeam/Docs) | 本文档站 | Apache-2.0 |
 
-只改 Minecraft 1.8.9 时选 Edge。需要覆盖 `1.19.2` 到 `26.2` 的 Fabric 版本时选 Nova。通用界面、音乐数据或浏览器能力应优先改对应的独立库，再在客户端接入。
+只改 Minecraft 1.8.9 时选 Edge。需要改 Fabric 版本时选 Nova，它只构建 `1.19.2`、`1.20.1`、`1.21.1`、`1.21.8`、`1.21.11`、`26.2` 这几个离散版本，不覆盖它们之间的其他版本。通用界面、音乐数据或浏览器能力应优先改对应的独立库，再在客户端接入。
 
 Extreme 是功能尚不完整的实验项目。GitHub 提供 `v1.0.0` 的 Windows、Linux 和 macOS 实验构建，但项目不承诺兼容性或支持；日常游玩请使用 Edge 或 Nova。启动器中的 Extreme 入口也指向这一实验项目，边界说明见[实验项目](/about/experiments)。
 
