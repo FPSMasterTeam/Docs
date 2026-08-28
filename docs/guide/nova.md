@@ -20,7 +20,7 @@ Nova 采用 MIT 许可证，源码在 [fpsmaster-nova](https://github.com/FPSMas
 ## 运行要求与已知限制
 
 - Windows 和 macOS 已测试。Linux 未测试，能不能跑不保证。
-- 需要 Nvidia 或 AMD 显卡。不支持 Intel 核显。
+- 显卡方面：Nvidia 和 AMD 显卡支持客户端界面的 GPU 加速；Intel 核显没有加速支持，界面会自动改用软件渲染——客户端仍可启动和游玩，但界面流畅度和体验没有保证。
 - 不支持 Android。
 - Java 版本要求跟随对应的原版 Minecraft。
 
@@ -51,7 +51,7 @@ Nova 只依赖 Fabric Loader，不需要 Fabric API。
 | 按住缩放视野 | 左 Ctrl |
 | 聊天栏命令前缀 | `.` |
 
-HUD 组件可以自由摆放，在 HUD 编辑器里拖动位置、调整大小。
+调整 HUD 布局的方式也和 Edge 相同：打开设置界面，点左侧边栏底部的「HUD 编辑器」，点击组件选中后拖动换位置，拖右下角的手柄调大小，点「完成」或按 Esc 保存退出。
 
 ## 功能
 
