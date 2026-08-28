@@ -1,9 +1,76 @@
 # 启动器
 
-FPSMaster 启动器是一个跨平台的桌面程序。它负责下载游戏本体、安装对应的加载器和 FPSMaster 客户端，然后直接启动游戏，省去手动配置的步骤。
+FPSMaster 启动器是一个桌面程序。它负责下载游戏本体、安装加载器和客户端、管理账号与实例，然后直接启动游戏。不想手动折腾文件的话，从它开始最省事。
 
-当前公开的 Release 版本是 v0.3.16，可以在 GitHub Release 页面下载。
+当前公开的 Release 版本是 v0.3.16。启动器采用 MIT 许可证，源码在 [fpsmaster-launcher](https://github.com/FPSMasterTeam/fpsmaster-launcher)。
 
-启动器采用 MIT 许可证，源码在 [fpsmaster-launcher](https://github.com/FPSMasterTeam/fpsmaster-launcher)。
+## 支持的平台
 
-本页内容还在写。
+| 平台 | 安装包 |
+| --- | --- |
+| Windows x64 | 安装程序 |
+| Windows 7 x64 | 单独构建的安装程序 |
+| Linux x64 | `.deb` 包 |
+| macOS（Apple Silicon） | `.dmg` |
+
+不提供 Intel Mac 安装包。Intel Mac 用户可以手动安装客户端，见[常见问题](/guide/faq#intel-mac-怎么办)。
+
+## 下载与安装
+
+1. 打开 [fpsmaster.top](https://fpsmaster.top)，下载对应平台的安装包。也可以从 [GitHub Release 页](https://github.com/FPSMasterTeam/fpsmaster-launcher/releases)下载。
+2. 按平台安装：
+   - Windows：运行安装程序，按提示完成。
+   - Linux：在终端执行 `sudo dpkg -i 文件名.deb`，或用系统的软件安装器打开。
+   - macOS：打开 `.dmg`，把应用拖进「应用程序」文件夹。
+3. 启动它。首次启动会有引导页。
+
+## 登录游戏账号
+
+启动器支持两种 Minecraft 账号：
+
+- **微软账号**：正版验证。进大多数正版服务器需要它。登录时会打开浏览器完成微软授权。
+- **离线账号**：输入一个用户名即可。只能进允许离线登录的服务器。
+
+添加方法：进入账号页，点添加账号，选微软或离线，按提示完成。
+
+## 启动 FPSMaster 客户端
+
+启动器自带两个预设实例：
+
+- **FPSMaster Edge (1.8.9)**：Forge 1.8.9 加 Edge 客户端。
+- **FPSMaster Nova**：Fabric 加 Nova 客户端，启动前可以选游戏版本。
+
+选中预设，点启动。首次启动会下载游戏文件、加载器和客户端本体，耗时取决于网络。之后再启动就快了。
+
+## 创建自己的实例
+
+除了预设，也可以建普通实例：
+
+1. 进入安装页。
+2. 选 Minecraft 版本。
+3. 选加载器：原版、Forge 或 Fabric。
+4. 需要 OptiFine 就勾上（可选项）。
+5. 开始安装，等待完成。
+
+每个实例的版本、模组和设置相互独立。在实例页可以改名、调整启动参数等设置。
+
+## 内容中心
+
+内容中心用来给实例装内容，不用自己下文件再拖目录。
+
+- 支持的类型：Mod、资源包、光影、世界。
+- 搜索来源：Modrinth 和 CurseForge。
+
+用法：选中一个实例，打开内容中心，选类型，搜索，点安装。内容会装进这个实例自己的目录，不影响其他实例。
+
+## 服务器列表
+
+服务器页可以保存常用服务器。选一个服务器启动，游戏会直接连进去。
+
+## 更新
+
+启动器检测到新版本时会提示更新，按提示操作即可。
+
+## 出问题了？
+
+先看[常见问题](/guide/faq)。没找到答案，去 [fpsmaster-launcher 的 Issue 页](https://github.com/FPSMasterTeam/fpsmaster-launcher/issues)反馈，写清楚系统、启动器版本和复现步骤。
