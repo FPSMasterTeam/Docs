@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # lastUpdated 需要完整 git 历史
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -35,8 +35,15 @@ jobs:
       - name: Build docs
         run: npm run docs:build
 
+      # VitePress 产物里带下划线目录；没有这个文件时，
+      # GitHub 可能按 Jekyll 处理并把站点收成 README。
+      - name: Disable Jekyll
+        run: touch docs/.vitepress/dist/.nojekyll
+
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
